@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header */
+.Header {
+    display: flex;
+    margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu{
+    background-image: url("./menu.svg");
+    margin: 20px 85px;
+    height: 60px;
+    width: 60px;
+    background-repeat: no-repeat;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Header h1{
+    text-align: center;
+  font-size:  50px;
+  background-color: aqua;
+  position: absolute;
+  left: 42%;
+}
+/* / */
+/* Body */
+.table{
+ background-color: aqua;
+ height: 70vh;
+ width: 1535px;
+ margin: 0px 85px 20px; 
+ border-bottom-left-radius: 15px;
+ border-bottom-right-radius: 15px;
+ 
+}
+
+.body .container{
   display: flex;
-  flex-direction: column;
+    position: relative;
+    left: 5%;
+    width: 1600px;
+    
+}
+
+.body{
+    position: fixed;
+}
+
+.list{
+    height: 500px;
+    width: 1460px;
+    border: 1px white solid;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    
+}
+
+
+.card {
+  background-color: white;
+  height: 80px;
+  width: 450px;
+  margin: 15px 12px ;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card .btns{
+  position: relative;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card .btns button{
+  background-color: blueviolet;
+  margin: 5px;
+  position: relative;
+  padding: 5px;
+  width: 80px;
+  
 }
+
+.container{
+  display: flex;
+  margin-left: 84.9px;
+}
+
+
+.container button{
+  width: 383.85px;
+  height: 80px;
+  background-color: blueviolet;
+  justify-content: space-between;
+  text-align: center; 
+  font-size: 30px;
+  border: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  
+}
+
+.container button:hover{
+background-color: aqua;
+}
+
+/* App.css */
+
+/* Sidebar Styles */
+

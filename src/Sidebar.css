@@ -1,0 +1,52 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -500px; /* Initial position (closed) */
+    width: 500px;
+    height: 100%;
+    background-color: #fff;
+    border: 1px rgba(0, 0, 0, 0.327)  solid;
+    color: #fff;
+    padding: 20px;
+    transition: left 0.3s ease-in-out; /* Add a smooth transition effect */
+    z-index: 100;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Slide in when open */
+  }
+  
+  /* Button Styles */
+  .sb{
+    margin-top: 10px;
+    margin-left: 90px;
+    border: 2px rgba(0, 0, 0, 0.327) solid;
+    border-radius: 10px;
+  }
+  .sidebar button{
+    background-color: aquamarine
+    ;
+  }
+
+  .sb  button {
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    background-image: url("menu.svg");
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+ 
+  }
+  
+  .sb:hover button{
+    background-color: #489df9;
+  }
+    
+  .sb:hover {
+    background-color: #489df9;
+  }
