@@ -1,23 +1,30 @@
 import React, { useState } from "react";
 import List from "./List";
-
+import Reserved from "./Reserved";
 const Body = () => {
   // Example state to track the current tab (Available, Reserved, Borrowed, History)
-  const [currentTab, setCurrentTab] = useState("Available");
+  const [currentTab, setCurrentTab] = useState(List);
 
+  function reserveTab(){
+    setCurrentTab(Reserved);
+  }
+
+  function availableTab(){
+    setCurrentTab(List);
+  }
   return (
     <div className="ui">
       <div className="container">
         {/* Add click handlers to the buttons */}
-        <button onClick={() => setCurrentTab("Available")}>Available</button>
-        <button onClick={() => setCurrentTab("Reserved")}>Reserved</button>
+        <button onClick={availableTab}>Available</button>
+        <button onClick={reserveTab}>Reserved</button>
         <button onClick={() => setCurrentTab("Borrowed")}>Borrowed</button>
         <button onClick={() => setCurrentTab("History")}>History</button>
       </div>
 
       <div className="table">
-        {/* Render List component with the currentTab */}
-        <List currentTab={currentTab} />
+        {currentTab}
+        
       </div>
     </div>
   );

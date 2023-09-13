@@ -4,18 +4,21 @@ import items from "./ItemList";
 
 const List = () => {
   return (
-    <div className="list">
+    <div className="list"> 
+      <div className="wrapper">
       {items.map((item) => {
         return (
           <div className="row" key={item.itemNo}>
             <Cards
+              imgUrl={item.imgURL}
               itemName={item.itemName}
-              itemNo={item.itemNo}
+              itemNumber={item.itemNumber}
               availability={item.availability}
             />
           </div>
         );
       })}
+    </div>
     </div>
   );
 };

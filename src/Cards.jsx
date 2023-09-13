@@ -1,15 +1,15 @@
 import React from "react";
-
+import './Cards.css';
 
 const Cards = (props) => {
   return (
     <div className="card">
       {/* Add an <img> element with the source from props.imgUrl */}
-      <img src={props.imgUrl} alt="Item Image" />
+      <img src={props.imgUrl} alt=""/>
 
       <div className="details">
-        <h2>{props.itemName}</h2>
-        <p>Item Number: {props.itemNo}</p>
+        <h2> {props.itemName}</h2>
+        <p>Item Number: {props.itemNumber}</p>
         <p>Availability: {props.availability}</p>
       </div>
 
