@@ -1,0 +1,26 @@
+.tableComp{
+    background-color: aqua;
+    width: 90%;
+    height: 91%;
+    position: relative;
+    margin-left: 5%;
+}
+
+.inventoryTable{
+    background-color: blueviolet;
+    position: relative;
+    margin-top: 60px;
+}
+
+
+table, th, tr{
+    border: 1px black solid;
+}
+
+tr{
+
+}
+
+th{
+    width: 300px;
+}

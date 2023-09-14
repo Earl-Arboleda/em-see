@@ -1,33 +1,48 @@
-import React, { useState } from 'react';
 import './Sidebar.css';
+import { useState } from 'react';
+import Body from "./Body";
+import Home from './Home';
+import Inventory from './Inventory';
 
-// Sidebar Component
-const Sidebar = ({ isOpen, onClose }) => {
+const Slider = ({isOpen,isClose}) => {
+  const [pageState, setPageState] = useState(null)
+
+  function emc(){
+    setPageState(()=>{
+      return(<Home/>);
+    })
+  }
+
+  function inventory(){
+    setPageState(()=>{
+      return(<Inventory/>);
+    })
+  }
+
+
+
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <button onClick={onClose}>Close Sidebar</button>
-      {/* Add your sidebar content here */}
+    <div>
+     
+       
+      <div className={`slide ${isOpen ? 'open': ''}` }>
+      
+      <div className={`slider ${isOpen ? 'open': ''}`}>
+        <button onClick={isClose}>close</button>
+        <div className='btnHolder'>
+          <button onClick={emc}>EMC</button>
+          <button onClick={inventory}>Inventory</button>
+          <button>Calendar</button>
+        </div>
+      </div>
+      <div className='baseSlider' onClick={isClose}></div>
+      </div>
+      {pageState}
     </div>
   );
 };
 
-// Parent Component
-function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
 
-  return (
-    <div className="slider">
-        <div className='sb'>
-             <button onClick={toggleSidebar}></button>
-        </div>
-      <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
-      {/* Your main content */}
-    </div>
-  );
-}
 
-export default App;
+export default Slider;

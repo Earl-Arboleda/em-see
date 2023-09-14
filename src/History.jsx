@@ -1,11 +1,11 @@
 import React from "react";
 import Cards from "./Cards";
-import items from "./ItemList";
+import borrowed from "./BorrowedList";
 
-const Available = () => {
+const Borrow = () => {
   return (
       <div className="wrapper">
-      {items.map((item) => {
+      {borrowed.map((item) => {
         return (
           <div className="row" key={item.itemNo}>
             <Cards
@@ -13,8 +13,8 @@ const Available = () => {
               itemName={item.itemName}
               itemNumber={item.itemNumber}
               availability={item.availability}
-              button1 = "Borrow"
-              button2 = "Reserve"
+              button1 = "Report"
+              button2 = "Return"
             />
           </div>
         );
@@ -23,4 +23,4 @@ const Available = () => {
   );
 };
 
-export default Available;
+export default Borrow;
