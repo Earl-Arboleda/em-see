@@ -14,8 +14,8 @@ const Cards = (props) => {
       </div>
 
       <div className="btns">
-        <button>Borrow</button>
-        <button>Reserve</button>
+        <button>{props.button1}</button>
+        <button>{props.button2}</button>
       </div>
     </div>
   );

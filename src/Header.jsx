@@ -1,12 +1,14 @@
-import Slider from "./Slider"
+import Sidebar from "./Sidebar";
 
 export default function Header(){
     return(
         <div className="Header">
-               <Slider/>
+            <Sidebar/>
+            <div className="head">
             <h1>
                 EM-See
             </h1>
+            </div>
         </div>
     );
 }

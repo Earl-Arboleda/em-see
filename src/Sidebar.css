@@ -1,37 +1,29 @@
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -500px; /* Initial position (closed) */
-    width: 500px;
-    height: 100%;
-    background-color: #fff;
-    border: 1px rgba(0, 0, 0, 0.327)  solid;
-    color: #fff;
-    padding: 20px;
-    transition: left 0.3s ease-in-out; /* Add a smooth transition effect */
-    z-index: 100;
+
+  .sideBtn{
+    background-image: url("menu.svg");
   }
-  
+
   .sidebar.open {
     left: 0; /* Slide in when open */
   }
   
   /* Button Styles */
-  .sb{
+  .sb {
     margin-top: 10px;
     margin-left: 90px;
     border: 2px rgba(0, 0, 0, 0.327) solid;
     border-radius: 10px;
+    background-color: black;
   }
   .sidebar button{
     background-color: aquamarine
     ;
   }
 
-  .sb  button {
-    margin: 10px;
-    height: 50px;
-    width: 50px;
+  .sb button {
+   
+    height: 30px;
+    width: 30px;
     background-color: white;
     background-image: url("menu.svg");
     background-repeat: no-repeat;
