@@ -1,41 +1,70 @@
-import React, { useState } from "react";
-import List from "./List";
-import Reserved from "./Reserved";
-import Available from "./List";
-import Borrow from "./Borrowed";
+import React, { useState, useEffect } from "react";
+import List from "./Body Contents/List";
+import Reserved from "./Body Contents/Reserved";
+import Borrow from "./Body Contents/Borrowed";
+import Available from "./Body Contents/List";
+import { Routes,Route } from "react-router";
+import { Link } from "react-router-dom";
+import Cards from "./Body Contents/Cards";
+import Client from "./Body Contents/ClientSide";
+import Modal from "./Body Contents/BorrowingModal";
 
 const Body = () => {
-  // Example state to track the current tab (Available, Reserved, Borrowed, History)
-  const [currentTab, setCurrentTab] = useState(Available);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedItemCode, setSelectedItemCode] = useState(null);
 
-  function reserveTab(){
-    setCurrentTab(Reserved);
-  }
 
-  function availableTab(){
-    setCurrentTab(List);
-  }
+  const openModal = () => {
+    setModalOpen(true);
+  };
 
-  function borrowTab(){
-    setCurrentTab(Borrow)
-  }
-  
-  return (
-    <div className="ui">
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
+  const borrowing = (ItemCode) =>{
+    setSelectedItemCode(ItemCode);
+    openModal();
+    console.log(ItemCode);
+    }
+
+
+  return (<>
+  <Modal isOpen={isModalOpen} onClose={closeModal} item={selectedItemCode}>
+        {/* Place the content you want to display in the modal here */}
+      </Modal>
+    <div className="body">
+    
+      <div className="table">
       <div className="container">
         {/* Add click handlers to the buttons */}
-        <button onClick={availableTab}>Available</button>
-        <button onClick={reserveTab}>Reserved</button>
-        <button onClick={borrowTab}>Borrowed</button>
-        <button onClick={() => setCurrentTab("History")}>History</button>
+        <Link to='/Available'>
+        <button >Available</button>
+        </Link>
+        <Link to='/Reserved'>
+        <button >Reserved</button>
+        </Link>
+        <Link to='/Borrowed'>
+        <button >Borrowed</button>
+        </Link>
+        <Link to='/History'>
+        <button >History</button>
+        </Link>
       </div>
 
-      <div className="table">
-      <div className="list"> 
-        {currentTab}
+      <div className="list">
+      
+      <Routes>
+        <Route path='Available' element={<Available click={borrowing} />} />
+        <Route path='Borrowed' element={<><Borrow /></>} />
+        <Route path='Reserved' element={<Reserved/>} />
+        <Route path='History' element={null} />
+      </Routes>
         </div>
       </div>
+      
     </div>
+    </>
   );
 };
 

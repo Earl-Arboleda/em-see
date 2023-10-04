@@ -1,51 +1,38 @@
-
+import React from 'react';
 import './App.css';
-import Body from './Body'
+import { Route, Routes } from 'react-router-dom'; // Import Link from react-router-dom
+import Body from './Body';
 import Header from './Header';
-import Home from './Home';
-import Inventory from './Inventory';
-import { useState } from 'react';
-import Login from './Login';
+import Slider from './Slider';
 import Footer from './Footer';
+import Add from './Inventory Components/AddModal';
+import Available from './Body Contents/List';
+import Borrow from './Body Contents/Borrowed';
+import Reserved from './Body Contents/Reserved';
+import Login from './Login component/LoginPage';
+import { ToastContainer } from 'react-toastify';
 
-const login = () =>{
-  return(<Header/>)
-}
-
-function App({isOpen, isClose}) {
-
-  const [pageState, setPageState] = useState(login)
-
-  function emc(){
-    setPageState(()=>{
-      return(<Home/>);
-    })
-  }
-
-  function inventory(){
-    setPageState(()=>{
-      return(<Inventory/>);
-    })
-  }
-
-
-
+function App() {
   return (
-    <div>
-      {pageState}
-       
-      <div className={`slide ${isOpen ? 'open': ''}` }>
+    <div className='App'>
+      <Slider/>
+      <Header />
+      <ToastContainer />
+
       
-      <div className={`slider ${isOpen ? 'open': ''}`}>
-        <button onClick={isClose}>close</button>
-        <div className='btnHolder'>
-          <button onClick={emc}>EMC</button>
-          <button onClick={inventory}>Inventory</button>
-          <button>Calendar</button>
-        </div>
-      </div>
-      <div className='baseSlider' onClick={isClose}></div>
-      </div>
+      <Routes>
+      <Route path='/' element={<Body/>}>
+      <Route path='Available' element={<Available/>} />
+        <Route path='Borrowed' element={<Borrow />} />
+        <Route path='Reserved' element={<Reserved/>} />
+        <Route path='History' element={null} />
+        </Route>
+   
+        <Route path='/Inventory' element={<Add/>}>
+          </Route>
+        <Route path='/Login' element={<Login/>}/>
+      </Routes>
+      
       <Footer/>
     </div>
   );

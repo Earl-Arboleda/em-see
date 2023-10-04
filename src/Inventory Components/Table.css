@@ -1,0 +1,98 @@
+.tableComp{
+    background-color: #dcdae0;
+    width: 95%;
+    height: 85%;
+    position: relative;
+    left: 2.5%;
+    border-radius: 5px;
+}
+
+.inventoryTable{
+    background-color: blueviolet;
+    position: relative;
+    height: auto;
+    margin-top: 60px;
+    border-radius: 5px;
+
+}
+/* Style for the entire table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+  }
+  
+  /* Style for table header */
+  .tabHead {
+    text-align: center;
+    background-color: #15b1ffd0;
+  }
+  
+  .tabHead th {
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    background-color: #15b1ffd0;
+    border-left: 1px #017cbae9 solid;
+    
+  }
+  .tabHead th:first-child{
+    border-top-left-radius: 5px;
+    border-left: none;
+  }
+  .tabHead th:last-child{
+    border-top-right-radius: 5px;
+  }
+  
+  /* Style for table rows */
+  table tbody{
+    overflow: scroll;
+  }
+
+  table tbody tr {
+    border: none;
+    border: 1px rgba(0, 0, 0, 0.44) solid;
+
+    height: 35px;
+    transition: background-color 0.2s ease;
+    
+  }
+  
+  /* Style for even rows */
+  table tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  table tbody tr:hover th{
+    background-color: #15b1ffd0;
+  }
+
+
+
+
+  table tbody th{
+    border: none;
+    background-color: #fff;
+  }
+  
+  /* Style for table cell content */
+  table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Style for table cell content with images */
+  table tbody td:first-child {
+    width: 80px;
+    padding: 5px;
+  }
+  
+  table tbody img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Hover effect on rows */
+  table tbody tr:hover {
+    background-color: #e0e0e0;
+  }
+  

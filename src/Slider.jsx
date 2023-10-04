@@ -1,52 +1,49 @@
-import './Sidebar.css';
-import { useState } from 'react';
-import Body from "./Body";
-import Home from './Home';
-import Inventory from './Inventory';
 
-const Slider = ({isOpen,isClose}) => {
-  const [pageState, setPageState] = useState(null)
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-  function emc(){
-    setPageState(()=>{
-      return(<Home/>);
-    })
-  }
+function Slider({body, inventory}) {
 
-  function inventory(){
-    setPageState(()=>{
-      return(<Inventory/>);
-    })
-  }
+  let prevOpen = false;
+  
+  const [isBtnClicked, setIsBtnClicked] = useState(false);
+  const [isOpen, setIsOpen] = useState(prevOpen);
+
+  const handleClick = () => {
+    setIsOpen(prevOpen => !prevOpen);
+  };
+  const toggleBtnClick = () => {
+    setIsBtnClicked(!isBtnClicked);
+  };
+
+  
 
 
 
   return (
     <div>
-     
-       
-      <div className={`slide ${isOpen ? 'open': ''}` }>
-      
-      <div className={`slider ${isOpen ? 'open': ''}`}>
-        <button onClick={isClose}>close</button>
-        <div className='btnHolder'>
-          <button onClick={emc}>EMC</button>
-          <button onClick={inventory}>Inventory</button>
-          <button>Calendar</button>
-        </div>
-      </div>
-      <div className='baseSlider' onClick={isClose}></div>
-      </div>
-      {pageState}
+      <div className={`btn ${isBtnClicked ? 'click' : ''}`} onClick={toggleBtnClick}>
+      <div id="nav-icon3" className={isOpen ? 'open' : ''} onClick={handleClick}>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>      </div>
+      <nav className={`sidebar ${isBtnClicked ? 'show' : ''}`}>
+        <div className="text">EM-See</div>
+        <ul>
+          <Link to='/'>
+          <button className='sideBtn' onClick={body}>EMC</button>
+          </Link>
+          <Link to='/Inventory'>
+          <button className='sideBtn' onClick={inventory}>Inventory</button>
+          </Link>
+          <button className='sideBtn'>Reservations</button>
+          <Link to='/Login'><button className='sideBtn'>Login</button></Link>
+        </ul>
+      </nav>
     </div>
   );
-};
-
-
-
-
-export default Slider;
-
-
+}
 
 export default Slider;

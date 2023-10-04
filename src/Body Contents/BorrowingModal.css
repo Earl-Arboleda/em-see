@@ -1,0 +1,97 @@
+/* CSS for the modal overlay */
+.body-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; /* Adjust the z-index as needed */
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* CSS for the modal content */
+.body-modal-content {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  height: 55%;
+  width: 25%;
+}
+
+/* CSS for the close button */
+.body-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+  margin-top: -15px;
+}
+
+.body-modal-content form input {
+  border: 1px rgba(0, 0, 0, 0.467) solid;
+  margin: 5px 0; /* Removed left margin for consistent spacing */
+  border-radius: 5px;
+  padding: 5px;
+  align-content: flex-start;
+}
+
+.body-modal h1{
+  text-align: center;
+  font-weight: bold ;
+  font-size: large;
+}
+
+.body-modal-content form .form-style {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* To stack input-container divs vertically */
+}
+
+.input-container {
+  margin-bottom: 10px; /* Add margin between input containers */
+}
+
+.body-modal-content form .input-container input {
+  width: 100%; /* Full width of the form-style */
+}
+
+.body-modal-content form .input-container label {
+  margin-bottom: 5px; /* Add margin below labels for spacing */
+  font-weight: bold;
+}
+
+/* Updated positioning for input-container divs */
+.body-modal-content form .input-container:nth-child(2) {
+  left: 0; /* Reset left positioning */
+}
+
+.body-modal-content form .input-container:nth-child(3) {
+  top: 10px; /* Add top positioning */
+}
+
+.body-modal-content form .input-container:nth-child(4) {
+  top: 10px; /* Add top positioning */
+  left: 0; /* Reset left positioning */
+}
+.body-modal-content form .input-container:last-child input{
+  width: 100px; /* Reset width */
+  top: 20px; /* Add top positioning */
+  background-color: #007bff;
+  margin-left: 35%;
+  color: #fff;
+  border: none;
+}
+.body-modal-content form .input-container:last-child input:hover{
+  background-color: #0055ff;
+}

@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Cards from "./Cards";
-import res from "./ReservedList";
+import { Route } from "react-router";
 
 const Reserved = () => {
+  const [data, setData] = useState([]);
+
+
+  useEffect(() => {
+    fetch('http://localhost:5000/Reserved')
+      .then((res) => res.json())
+      .then((data) => setData(data))
+      .catch((error) => console.log('error', error));
+  }, []);
+
   return (
     <div className="wrapper">
-    {res.map((item) => {
+    {data.map((item) => {
       return (
         <div className="row" key={item.itemNo}>
           <Cards

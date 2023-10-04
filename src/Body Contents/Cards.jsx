@@ -2,9 +2,10 @@ import React from "react";
 import './Cards.css';
 
 const Cards = (props) => {
+
+  
   return (
     <div className="card">
-      {/* Add an <img> element with the source from props.imgUrl */}
       <img src={props.imgUrl} alt=""/>
 
       <div className="details">
@@ -14,7 +15,7 @@ const Cards = (props) => {
       </div>
 
       <div className="btns">
-        <button>{props.button1}</button>
+        <button onClick={props.borrow}>{props.button1}</button>
         <button>{props.button2}</button>
       </div>
     </div>
