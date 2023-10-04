@@ -20,15 +20,29 @@
     position: relative;
     width: auto;
     text-align: center;
+    font-weight: bold;
+    height: auto;
+
 }
+
+.head{
+    margin-left: 40%;
+    font-size: 40px;
+    position: relative;
+    width: auto;
+    text-align: center;
+}
+.Header h1{
 .Header h1{
     text-align: center;
 }
 
 
+
 /* Body Styles */
 .ui{
   position: relative;
+  margin-top: 70px;
   margin-top: 70px;
 }
 
@@ -47,6 +61,7 @@
     left: 5%;
     width: 1000px;
 }
+/* BODY CONTENT */
 /* BODY CONTENT */
 .body {
     position: fixed;
@@ -85,12 +100,14 @@
 .container button {
     width: 250px;
     height: 30px;
+    height: 30px;
     background-color: blue;
     text-align: center; 
     font-size: 15px;
     border: none;
     margin-bottom: 20px;
     margin-left: 91px;
+    color: #fff;
     color: #fff;
   }
 

@@ -46,3 +46,7 @@ const Slider = ({isOpen,isClose}) => {
 
 
 export default Slider;
+
+
+
+export default Slider;
