@@ -1,10 +1,7 @@
 const Footer = () =>{
     return(
         <div className="footer">
-            <div>
-            
-            </div>
-            s
+            <span></span>
         </div>
     );
 }

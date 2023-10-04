@@ -1,54 +1,44 @@
-
+import React from 'react';
 import './App.css';
 import Body from './Body'
 import Header from './Header';
-import Home from './Home';
-import Inventory from './Inventory';
-import { useState } from 'react';
-import Login from './Login';
+import Inventory from './Inventory Components/Inventory';
+import { useState, useEffect } from 'react';
 import Footer from './Footer';
+import Slider from './Slider';
+import Inv from './Inventory Components/InventoryComponents';
+import Add from './Inventory Components/AddModal';
+import {}
 
-const login = () =>{
-  return(<Header/>)
+function App() {
+const [pageState, setPageState] = useState()
+
+const body = () => {
+  setPageState(() => {
+    return(
+    <Body/>
+  )})
+  
 }
 
-function App({isOpen, isClose}) {
-
-  const [pageState, setPageState] = useState(login)
-
-  function emc(){
-    setPageState(()=>{
-      return(<Home/>);
-    })
-  }
-
-  function inventory(){
-    setPageState(()=>{
-      return(<Inventory/>);
-    })
-  }
+const inventory = () => {
+  setPageState(() => {
+    return(
+      <Inv/>
+    )
+  })
+}
 
 
-
-  return (
-    <div>
-      {pageState}
-       
-      <div className={`slide ${isOpen ? 'open': ''}` }>
-      
-      <div className={`slider ${isOpen ? 'open': ''}`}>
-        <button onClick={isClose}>close</button>
-        <div className='btnHolder'>
-          <button onClick={emc}>EMC</button>
-          <button onClick={inventory}>Inventory</button>
-          <button>Calendar</button>
-        </div>
-      </div>
-      <div className='baseSlider' onClick={isClose}></div>
-      </div>
-      <Footer/>
-    </div>
-  );
+return(
+  <div className='App'>
+    <Slider inventory={inventory} body={body}/>
+    <Header />
+    {pageState}
+    <Footer/> 
+    {/* <Add/> */}
+  </div>
+);
 }
 
 export default App;

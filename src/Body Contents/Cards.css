@@ -1,7 +1,7 @@
 .card {
   background-color: white;
   height: 80px;
-  width: 415px;
+  width: 440px;
   margin: 10px;
   display: flex;
   justify-content: space-between;
@@ -26,6 +26,7 @@ border-radius: 5px;
   text-align:start;
   margin-left: -40px;
   width: auto;
+  background-color: #fff;
 }
 
 .details h2{
@@ -33,28 +34,36 @@ border-radius: 5px;
   font-weight: bold;
   color: black;
   margin: 0;
+  background-color: #fff;
+
 }
 
 .details p{
   font-size: 13px;
+  background-color: #fff;
+
 }
 
 
 .card .btns {
   position: relative;
   margin-right: 5px;
+  background-color: #fff;
+
 }
 
 .card .btns button {
-  background-color: blue;
+  background-color: #007bff;
   margin: 5px;
   position: relative;
   padding: 5px;
-  width: 70px;
+  width: 60px;
   font-size: 12px;
   color: #fff;
+  border-radius: 4px;
+  transition: .1s ease;
 }
 
 .card .btns button:hover{
-  background-color: rgb(0, 0, 207);
+  background-color: #0055ff;
 }

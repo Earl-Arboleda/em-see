@@ -2,9 +2,10 @@ import React from "react";
 import './Cards.css';
 
 const Cards = (props) => {
+
+  
   return (
     <div className="card">
-      {/* Add an <img> element with the source from props.imgUrl */}
       <img src={props.imgUrl} alt=""/>
 
       <div className="details">

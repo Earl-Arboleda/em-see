@@ -1,27 +1,36 @@
 import React, { useState } from "react";
-import List from "./List";
-import Reserved from "./Reserved";
-import Available from "./List";
-import Borrow from "./Borrowed";
+import List from "./Body Contents/List";
+import Reserved from "./Body Contents/Reserved";
+import Borrow from "./Body Contents/Borrowed";
+import Available from "./Body Contents/List";
 
 const Body = () => {
   // Example state to track the current tab (Available, Reserved, Borrowed, History)
-  const [currentTab, setCurrentTab] = useState(Available);
+  function defaultPage(){
+    return(<Available/>)
+  }
+  
+  const [currentTab, setCurrentTab] = useState(defaultPage);
 
   function reserveTab(){
-    setCurrentTab(Reserved);
+    setCurrentTab(() => {
+      return(<Reserved/>)
+    });
   }
 
   function availableTab(){
-    setCurrentTab(List);
+    setCurrentTab(()=>{
+      return(<Available/>)
+    });
   }
 
   function borrowTab(){
-    setCurrentTab(Borrow)
+    setCurrentTab(()=>{return(<Borrow/>)})
   }
   
   return (
-    <div className="ui">
+    <div className="body">
+      <div className="table">
       <div className="container">
         {/* Add click handlers to the buttons */}
         <button onClick={availableTab}>Available</button>
@@ -29,10 +38,8 @@ const Body = () => {
         <button onClick={borrowTab}>Borrowed</button>
         <button onClick={() => setCurrentTab("History")}>History</button>
       </div>
-
-      <div className="table">
       <div className="list"> 
-        {currentTab}
+       {currentTab}
         </div>
       </div>
     </div>
