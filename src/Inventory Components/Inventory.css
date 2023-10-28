@@ -1,100 +1,100 @@
- .inv-back{
-    font-size: 13px;
-    background-color: #d0cbd8;
-    position: absolute;
-    height: 100%;
-    width: 100%;
- }
- 
+.inv-back{
+  font-size: 13px;
+  background-color: #d0cbd8;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
- .inventory{
-    width: 96%;
-    height: 84%;
-    position: absolute;
-    background-color: #fff;
-    top: 10%;
-    left: 2%;
-    border-radius: 5px;
-    box-shadow: 0px 1px 2px #1b1b1bbe;
- }
 
- .invTop{
-    width: 500px;
-    height: auto;
-    position: absolute;
-    right: 2.5%;
-    display: flex;
-    top: 3%;
-    background-color: #fff;
-    justify-content: flex-end;
-    
+.inventory{
+  width: 96%;
+  height: 84%;
+  position: absolute;
+  background-color: #fff;
+  top: 10%;
+  left: 2%;
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px #1b1b1bbe;
+}
+
+.invTop{
+  width: 500px;
+  height: auto;
+  position: absolute;
+  right: 2.5%;
+  display: flex;
+  top: 3%;
+  background-color: #fff;
+  justify-content: flex-end;
+  
 }
 
 .invTop .search-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    margin:1px;
-  }
-  
-  /* Style for the input field */
- .search {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 12px;
-    width: 250px;
-    background-color: white;
-    outline: none; /* Remove default input focus outline */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin:1px;
 }
 
-  .search:focus{
-    border: 2px rgb(7, 7, 100) solid;
-  }
-  .search:focus .searchSubmit{
-    margin-bottom: 1px;
+/* Style for the input field */
+.search {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 250px;
+  background-color: white;
+  outline: none; /* Remove default input focus outline */
+}
 
-  }
-  /* Style for the submit button */
- .searchSubmit {
-    background-color: #007bff; /* Change to your desired button color */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    width: 80px;
-    margin-left: 10px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-  }
-  
-  /* Hover effect for the submit button */
-  .submit:hover {
-    background-color: #0800e1; /* Change to a darker shade for hover effect */
-  }
-  
+.search:focus{
+  border: 2px rgb(7, 7, 100) solid;
+}
+.search:focus .searchSubmit{
+  margin-bottom: 1px;
+
+}
+/* Style for the submit button */
+.searchSubmit {
+  background-color: #007bff; /* Change to your desired button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 80px;
+  margin-left: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect for the submit button */
+.submit:hover {
+  background-color: #0800e1; /* Change to a darker shade for hover effect */
+}
+
 
 .invTop button{
-    background-color: #007bff; /* Change to your desired button color */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-left: 10px;
-    width: 80px;
-    height: 30px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;}
+  background-color: #007bff; /* Change to your desired button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-left: 10px;
+  width: 80px;
+  height: 30px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;}
 
 .invTop button:hover{
-    background-color: #0800e1; /* Change to a darker shade for hover effect */
+  background-color: #0800e1; /* Change to a darker shade for hover effect */
 }
 
 .invBody{
-    width: 100%;
+  width: 100%;
 }

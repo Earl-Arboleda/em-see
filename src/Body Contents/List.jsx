@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Cards from "./Cards";
-import items from "./ItemList";
 // import { useEffect, useState } from "react";
 
 
